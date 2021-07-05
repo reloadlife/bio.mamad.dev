@@ -28,41 +28,6 @@ module.exports = (
             PATH_PREFIX: "",
 
             webpack(config, { isServer, buildId, dev }) {
-                // Fixes npm packages that depend on `fs` module
-                // config.node = {
-                //     fs: 'empty',
-                // };
-
-                const workboxOptions = {
-                    clientsClaim: true,
-                    skipWaiting: true,
-                    globPatterns: ['.next/static/*', '.next/static/commons/*'],
-                    modifyUrlPrefix: {
-                        '.next': '/server',
-                    },
-                    runtimeCaching: [
-                        {
-                            urlPattern: '/',
-                            handler: 'networkFirst',
-                            options: {
-                                cacheName: 'html-cache',
-                            },
-                        },
-                        {
-                            urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
-                            handler: 'cacheFirst',
-                            options: {
-                                cacheName: 'image-cache',
-                                cacheableResponse: {
-                                    statuses: [0, 200],
-                                },
-                            },
-                        },
-                    ],
-                };
-
-
-
                 return config;
             },
 
