@@ -5,7 +5,7 @@
     "dev": "next",
     "build": " next build",
     "start": "next start",
-    "prod_start": "next start NODE_ENV=production ",
+    "prod_start": "next start NODE_ENV=production "
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
