@@ -5,6 +5,7 @@
     "dev": "next",
     "build": " next build",
     "start": "next start",
+    "build:ex": "next build && next export",
     "prod_start": "next start NODE_ENV=production "
   },
   "dependencies": {
@@ -44,6 +45,8 @@
     "@types/react-dom": "17.0.0",
     "@types/styled-components": "5.0.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
     "typescript": "3.5.2"
   },
   "license": "ISC"

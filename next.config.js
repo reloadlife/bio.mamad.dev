@@ -29,9 +29,9 @@ module.exports = (
 
             webpack(config, { isServer, buildId, dev }) {
                 // Fixes npm packages that depend on `fs` module
-                config.node = {
-                    fs: 'empty',
-                };
+                // config.node = {
+                //     fs: 'empty',
+                // };
 
                 const workboxOptions = {
                     clientsClaim: true,
@@ -61,33 +61,7 @@ module.exports = (
                     ],
                 };
 
-                if (!isServer && !dev) {
-                    config.plugins.push(
-                        new NextWorkboxPlugin({
-                            buildId,
-                            ...workboxOptions,
-                        }),
-                        new WebpackPwaManifest({
-                            filename: 'static/manifest.json',
-                            name: 'AmuMovies',
-                            short_name: 'AmuMovies',
-                            description: 'AmuMovies',
-                            background_color: '#ffffff',
-                            theme_color: '#d6004a',
-                            display: 'standalone',
-                            orientation: 'portrait',
-                            fingerprints: false,
-                            inject: false,
-                            start_url: '/',
-                            ios: {
-                                'apple-mobile-web-app-title': 'AmuMovies',
-                                'apple-mobile-web-app-status-bar-style': '#d6004a',
-                            },
-                            includeDirectory: true,
-                            publicPath: '..',
-                        })
-                    );
-                }
+
 
                 return config;
             },
@@ -100,9 +74,6 @@ module.exports = (
                 return {
                     '/': {
                         page: '/',
-                        query: {
-                            q: ''
-                        }
                     },
                 }
             },
