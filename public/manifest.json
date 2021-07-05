@@ -1,0 +1,11 @@
+{
+    "name": "bio.mamad.dev",
+    "short_name": "bio.mamad.dev",
+    "display": "standalone",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "start_url": "/",
+    "icons": [
+
+    ]
+}
