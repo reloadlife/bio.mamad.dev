@@ -11,6 +11,8 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RedditIcon from '@material-ui/icons/Reddit';
+import theme from "../theme";
+import {Head} from "next/document";
 
 
 class Index extends React.Component<any, any> {
@@ -27,6 +29,17 @@ class Index extends React.Component<any, any> {
 
         return (
             <TemplateProvider>
+                <Head>
+                    <meta property="og:site_name" content="Mohammad Mahdi Afshar | bio"/>
+                    <meta name='apple-mobile-web-app-title' content={"Mohammad Mahdi Afshar | bio"} />
+                    <meta name='description' content={`${age} years old, full stack developer.`} />
+                    <meta name='application-name' content={"Mohammad Mahdi Afshar"} />
+                    <meta property="og:type" content="website"/>
+                    <meta name="twitter:card" content="summery_large_image"/>
+
+                    <title>bio.mamad.dev</title>
+                </Head>
+
                 <Box p={4}>
                     <Box p={3}>
                         <Typography variant="h5">

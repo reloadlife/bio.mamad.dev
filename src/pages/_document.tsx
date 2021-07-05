@@ -39,10 +39,10 @@ export default class MyDocument extends Document {
 
 
 
-                    <meta property="og:site_name" content="DummyName"/>
-                    <meta name='apple-mobile-web-app-title' content={"DummyName"} />
-                    <meta name='description' content={"Dummy Description"} />
-                    <meta name='application-name' content={"DummyName"} />
+                    <meta property="og:site_name" content="Mohammad Mahdi Afshar | bio"/>
+                    <meta name='apple-mobile-web-app-title' content={"Mohammad Mahdi Afshar | bio"} />
+                    <meta name='description' content={""} />
+                    <meta name='application-name' content={"Mohammad Mahdi Afshar"} />
                     <meta property="og:type" content="website"/>
                     <meta name="twitter:card" content="summery_large_image"/>
                     <meta name='apple-mobile-web-app-capable' content='yes' />
