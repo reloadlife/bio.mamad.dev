@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
     render(): JSX.Element {
         return (
             <Html lang="en">
-                <Head>
+                <Head prefix="og: https://ogp.me/ns">
                     <link rel="stylesheet"
                           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
                     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
@@ -35,22 +35,25 @@ export default class MyDocument extends Document {
                     <meta charSet="UTF-8"/>
                     <meta name="viewport"
                           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-                    <meta name="robots" content="all"/>
+                    <meta name="robots" content="INDEX, FOLLOW"/>
 
-
+                    <meta property="og:type" content="og:profile" />
+                    <meta property="profile:first_name" content="Mohammad Mahdi"/>
+                    <meta property="profile:last_name" content="Afshar"/>
+                    <meta property="profile:username" content="mamad"/>
+                    <meta property="profile:gender" content="male"/>
 
                     <meta property="og:site_name" content="Mohammad Mahdi Afshar | bio"/>
-                    <meta name='apple-mobile-web-app-title' content={"Mohammad Mahdi Afshar | bio"} />
-                    <meta name='description' content={""} />
-                    <meta name='application-name' content={"Mohammad Mahdi Afshar"} />
-                    <meta property="og:type" content="website"/>
-                    <meta name="twitter:card" content="summery_large_image"/>
-                    <meta name='apple-mobile-web-app-capable' content='yes' />
-                    <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-                    <meta name='format-detection' content='telephone=no' />
-                    <meta name='mobile-web-app-capable' content='yes' />
 
-                    <title>MAMAD . DEV</title>
+                    <meta property="og:url" content="https://bio.mamad.dev" />
+                    <meta property="og:image" content="https://bio.mamad.dev/mamad.png" />
+                    <meta name='og:description' content={`20 years old, full stack developer.`} />
+
+
+                    <meta name='description' content={`20 years old, full stack developer.`} />
+                    <meta name="twitter:card" content="summery_large_image"/>
+
+                    <title>bio.mamad.dev</title>
                 </Head>
 
                 <body style={{margin: "0px"}} id="body">
