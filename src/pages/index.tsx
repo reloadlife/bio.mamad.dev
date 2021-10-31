@@ -1,6 +1,6 @@
 import React from 'react';
 import TemplateProvider from "../components/TemplateProvider";
-import {Box, Divider, Link} from "@material-ui/core";
+import {Avatar, Box, Chip, Container, Divider, Grid} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import {SvgIcon} from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
@@ -11,7 +11,9 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import RedditIcon from '@material-ui/icons/Reddit';
-
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 class Index extends React.Component<any, any> {
 
@@ -21,82 +23,207 @@ class Index extends React.Component<any, any> {
             Math.round(
                 (
                     new Date("11/27/2001").getTime() - new Date().getTime()
-                ) / ( (1000 * 3600 * 24) * 365 )
+                ) / ((1000 * 3600 * 24) * 365)
             )
-        ) ;
+        );
 
         return (
             <TemplateProvider>
-                <Box p={4}>
-                    <Box p={3}>
+                <Container maxWidth="sm">
+                    <Box
+                         display="flex"
+                         justifyContent="center"
+                         alignItems="center"
+                         paddingTop={2}
+                    >
+                        <Avatar
+                            src="/profile.jpg"
+                            style={{
+                                height: 200,
+                                width: 200
+                            }}
+                        >
+                            M
+                        </Avatar>
+                    </Box>
+                    <Box
+                         display="flex"
+                         justifyContent="center"
+                         alignItems="center"
+                         paddingY={1}
+                    >
                         <Typography variant="h5">
                             <code>
-                                <b>Mohammad Mahdi Afshar !</b>
+                                Mohammad Mahdi Afshar
+                                <small style={{fontSize: 10}}> he/him</small>
                             </code>
                         </Typography>
                     </Box>
 
-                    <Box p={3} paddingTop={0}>
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={1}
+                    >
+                        <Grid item xs={12} md={4}>
+                            <Chip variant="outlined" label="Karaj, Alborz, Iran" icon={<LocationOnIcon/>}/>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Chip variant="outlined" label="me@mamad.dev" component="a" clickable
+                                  href="mailto:me@mamad.dev" icon={<MailIcon/>}/>
+                        </Grid>
+                        <Grid item xs={12} md={4}>
+                            <Chip variant="outlined" label="+98 935 931 0395" component="a" clickable
+                                  href="tel:+989359310395" icon={<PhoneIcon/>}/>
+                        </Grid>
+                    </Grid>
+
+
+                    <Box paddingY={1}>
                         <Divider/>
                     </Box>
 
-                    <Box p={3} paddingTop={0}>
+                    <Box paddingY={.5}>
                         <Typography variant="body1">
                             <code>
-                                <b>{age} years old, full stack developer.</b>
+                                <b>{age} years old, Web Developer.</b>
+                            </code>
+                        </Typography>
+
+                        <Typography variant="body2">
+                            <code>
+                                <b>
+                                    Full time Front-end Developer, with +3 years experience as a React
+                                    developer;
+                                    and +6 years experience in back-end development as a PHP developer;
+                                </b>
                             </code>
                         </Typography>
                     </Box>
 
-
-                    <Box p={3} paddingTop={0}>
-                        <Typography variant="body2">
-                            <code>
-                                Languages:
-                            </code>
-                        </Typography>
-                        <Typography variant="body2">
-                            <code>
-                                TypeScript, JavaScript, PHP, Bash, HTML5/CSS3, Lua
-                            </code>
-                        </Typography>
+                    <Box paddingY={1}>
+                        <Divider/>
                     </Box>
 
-                    <Box p={3} paddingTop={0}>
+                    <Box paddingY={.5}>
                         <Typography variant="body2">
                             <code>
-                                Interests:
+                                Skills:
                             </code>
                         </Typography>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    <b>Technology: </b>
+                                </code>
+
+                                <code>
+                                    React.JS, React, Next.JS, MaterialUI, TailwindCSS,
+                                    ChakraUi, TypeScript, JavaScript,
+                                    HTML5/CSS3, Git, PHP, Laravel, Redis, MySQL, TelegramBots, Telegram MTProto,
+                                    Bash, Lua, MoonScript, Ruby, Python, DevOps, Linux,
+                                    Server Management, Server Configuration, Virtualization.
+                                </code>
+                            </Typography>
+                        </Box>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    <b>Tools: </b>
+                                </code>
+                                <code>
+                                    Jetbrains Idea, Github, GitLab, Docker, Discord/Slack,
+                                    VS-Code, Linux, Figma, Adobe XD
+                                </code>
+                            </Typography>
+                        </Box>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    <b>Languages: </b>
+                                </code>
+                                <code>
+                                    Persian (Native), English (Fluent), Turkish (Conversational)
+                                </code>
+                            </Typography>
+                        </Box>
+
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    <b>Interests: </b>
+                                </code>
+                                <code>
+                                    Scripting, Front-end, Laravel, Gaming, Streaming, Premiere Pro, Web Scraping,
+                                    Docker, Hacking, Pentesting,
+                                    Virtualization, Learning new Stuff.
+                                </code>
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                    <Box paddingY={1}>
+                        <Divider/>
+                    </Box>
+
+                    <Box paddingY={.5}>
                         <Typography variant="body2">
                             <code>
-                                Scripting, Front-end, Laravel, Gaming, Streaming, Premiere Pro, Web Scraping, Docker, Virtualization, ...
+                                Programming Experience:
                             </code>
                         </Typography>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    {"< this part is to be written >"}
+                                </code>
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                    <Box paddingY={.5}>
+                        <Typography variant="body2">
+                            <code>
+                                Education:
+                            </code>
+                        </Typography>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    {"< this part is to be written >"}
+                                </code>
+                            </Typography>
+                        </Box>
+                    </Box>
+
+                    <Box paddingY={.5}>
+                        <Typography variant="body2">
+                            <code>
+                                Professional Experience:
+                            </code>
+                        </Typography>
+                        <Box p={2} paddingTop={1} paddingBottom={0}>
+                            <Typography variant="body2">
+                                <code>
+                                    {"< this part is to be written >"}
+                                </code>
+                            </Typography>
+                        </Box>
                     </Box>
 
 
-                    <Box p={3} paddingTop={0}>
-                        <Typography variant="subtitle2">
-                            <code>
-                                Email: <Link href="mailto:me@mamad.dev">me@mamad.dev</Link>
-                                <span> | </span>
-                                Phone: <Link href="tel:+989359310395">+98 935 931 0395</Link>
-                                <span> | </span>
-                                Resume: email me to get my resume
-                            </code>
-                        </Typography>
-                    </Box>
-
-
-
-                    <Box p={3}>
+                    <Box paddingY={.5}>
                         <Divider/>
                     </Box>
 
 
-                    <Box p={3} paddingTop={0}>
-                        <IconButton href="https://twitter.com/MrReloadLife" target="_blank">
+                    <Box paddingY={.5}
+                         display="flex"
+                         justifyContent="center"
+                         alignItems="center">
+                        <IconButton href="https://twitter.com/Mamikachuu" target="_blank">
                             <TwitterIcon/>
                         </IconButton>
                         <IconButton href="https://t.me/reloadlife" target="_blank">
@@ -105,7 +232,9 @@ class Index extends React.Component<any, any> {
                         <IconButton href="https://instagram.com/reloadlife" target="_blank">
                             <InstagramIcon/>
                         </IconButton>
-                        <IconButton href="https://youtube.com/channel/UCjTZIBpln06RcS53oUIiCDA?sub_confirmation=1" target="_blank">
+                        <IconButton
+                            href="https://youtube.com/channel/UCjTZIBpln06RcS53oUIiCDA?sub_confirmation=1"
+                            target="_blank">
                             <YouTubeIcon/>
                         </IconButton>
                         <IconButton href="https://www.linkedin.com/in/reloadlife/" target="_blank">
@@ -128,12 +257,13 @@ class Index extends React.Component<any, any> {
                                     fill="#FEFEFE"/>
                             </SvgIcon>
                         </IconButton>
-                        <IconButton href="https://reddit.com/user/reloadlifeme" target="_blank">
+                        <IconButton href="https://reddit.com/user/reloadlifeme" target="_blank"
+                                    title="DO NOT EVER GO THERE. thank you <3">
                             <RedditIcon/>
                         </IconButton>
                     </Box>
 
-                </Box>
+                </Container>
             </TemplateProvider>
         );
     }
