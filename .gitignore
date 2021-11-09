@@ -17,6 +17,7 @@
 
 # misc
 .DS_Store
+*.pem
 
 # debug
 npm-debug.log*
@@ -29,10 +30,12 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-.cache
+# vercel
+.vercel
 
+# typescript
+*.tsbuildinfo
 
 yarn.lock
+*.lock
 
-
-.idea
