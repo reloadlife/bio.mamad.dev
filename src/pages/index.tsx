@@ -72,7 +72,7 @@ const Home: NextPage = () => {
                         py: 1
                     }}
                 >
-                    <Typography variant="h5">
+                    <Typography variant="h5" component={"h1"}>
                         <code>
                             Mohammad Mahdi Afshar
                             <small style={{fontSize: 10}}> he/him</small>
@@ -136,13 +136,15 @@ const Home: NextPage = () => {
                     <Box p={2} paddingTop={1} paddingBottom={0}>
                         <Typography variant="body2">
                             <code>
-                                <b>Technology: </b>
+                                <b>Technologies: </b>
                             </code>
 
                             <code>
-                                React.JS, React, Next.JS, MaterialUI, TailwindCSS,
-                                ChakraUi, TypeScript, JavaScript,
-                                HTML5/CSS3, Git, PHP, Laravel, Redis, MySQL, TelegramBots, Telegram MTProto,
+                                Node, TypeScript, JavaScript,
+                                React, Next.JS,
+                                MaterialUI, TailwindCSS, ChakraUi,
+                                HTML5/CSS3, Git, PHP, Laravel, MySQL, Redis,
+                                TelegramBots, Telegram MTProto,
                                 Bash, Lua, MoonScript, Ruby, Python, DevOps, Linux,
                                 Server Management, Server Configuration, Virtualization.
                             </code>
@@ -191,13 +193,125 @@ const Home: NextPage = () => {
                 <Box paddingY={.5}>
                     <Typography variant="body2">
                         <code>
-                            Programming Experience:
+                            Professional Experience:
                         </code>
                     </Typography>
-                    <Box p={2} paddingTop={1} paddingBottom={0}>
+                    <Box p={2} paddingTop={0} paddingBottom={0}>
                         <Typography variant="body2">
                             <code>
-                                {"< this part is to be written >"}
+                                <ul>
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link onClick={() => alert('nothing available')}>
+                                                MT
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Lead Front-end Developer, React, Next.JS</i>
+
+                                            <small style={{color: 'gray'}}>2021 - now</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link  href="https://tamasack.ir">
+                                                Tamasack
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Lead back-end developer - PHP,Laravel</i>
+
+                                            <small style={{color: 'gray'}}>2019 - now</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link href={"https://azardata.net"}>
+                                                AzarData
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Co-Finder, SysAdmin</i>
+
+                                            <small style={{color: 'gray'}}>2017 - now</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link href={"https://unixweb.org"}>
+                                                unixweb
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>SysAdmin</i>
+
+                                            <small style={{color: 'gray'}}>2015 - 2017</small>
+                                        </Box>
+                                    </li>
+                                </ul>
+                            </code>
+                        </Typography>
+                    </Box>
+                </Box>
+
+                <Box paddingY={.5}>
+                    <Typography variant="body2">
+                        <code>
+                            projects:
+                        </code>
+                    </Typography>
+                    <Box p={2} paddingTop={0} paddingBottom={0}>
+                        <Typography variant="body2">
+                            <code>
+                                <ul>
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link  href="https://t.me/Chatogeram">
+                                                Chatogeram
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Telegram Chat Bot, Laravel</i>
+
+                                            <small style={{color: 'gray'}}>2019</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link  href="https://github.com/reloadlife/telegram-bot-php">
+                                                telegram-bot-php
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Simple PHP Telegram API Wrapper</i>
+
+                                            <small style={{color: 'gray'}}>OpenSource</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link  href="https://github.com/reloadlife/LATRMG">
+                                                LATRMG
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>PHP Telegram SDK for Laravel</i>
+
+                                            <small style={{color: 'gray'}}>OpenSource - in progress</small>
+                                        </Box>
+                                    </li>
+
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <Link  href="https://github.com/Unleash-the-internet/V2ShadowRay">
+                                                V2ShadowRay
+                                            </Link>
+
+                                            <i style={{flexGrow: 1, paddingLeft: 6}}>Simple Service to break internet bans</i>
+
+                                            <small style={{color: 'gray'}}>OpenSource</small>
+                                        </Box>
+                                    </li>
+
+                                </ul>
                             </code>
                         </Typography>
                     </Box>
@@ -209,25 +323,29 @@ const Home: NextPage = () => {
                             Education:
                         </code>
                     </Typography>
-                    <Box p={2} paddingTop={1} paddingBottom={0}>
+                    <Box p={2} paddingTop={0} paddingBottom={0}>
                         <Typography variant="body2">
                             <code>
-                                {"< this part is to be written >"}
-                            </code>
-                        </Typography>
-                    </Box>
-                </Box>
+                                <ul>
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <b style={{flexGrow: 1,}} >
+                                                English Translation
+                                            </b>
 
-                <Box paddingY={.5}>
-                    <Typography variant="body2">
-                        <code>
-                            Professional Experience:
-                        </code>
-                    </Typography>
-                    <Box p={2} paddingTop={1} paddingBottom={0}>
-                        <Typography variant="body2">
-                            <code>
-                                {"< this part is to be written >"}
+                                            <small style={{color: 'gray'}}>currently studing at azad university of karaj</small>
+                                        </Box>
+                                    </li>
+                                    <li>
+                                        <Box sx={{display: 'flex'}}>
+                                            <b style={{flexGrow: 1,}}>
+                                                Web development
+                                            </b>
+
+                                            <small style={{color: 'gray'}}>self-taught at home</small>
+                                        </Box>
+                                    </li>
+                                </ul>
                             </code>
                         </Typography>
                     </Box>
